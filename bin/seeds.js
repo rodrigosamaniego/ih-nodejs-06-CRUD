@@ -5,7 +5,7 @@ const mongoose 		= require("mongoose")
 const Book			= require("./../models/Book")
 
 // 2. CONEXIÓN A BD
-mongoose.connect("mongodb+srv://rodrigosamaniego:Panarabbit107@cluster0.axprv.mongodb.net/myFirstDatabase?retryWrites=true&w=majority", {
+mongoose.connect(process.env.MONGODB_URI, {
 	useNewUrlParser: true,
 	useUnifiedTopology: true
 })
